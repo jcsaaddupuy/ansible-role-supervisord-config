@@ -1,0 +1,8 @@
+[program:{{ item.value['program_name'] }}]
+
+{% for key, value in item.value.items() %}
+{% if key != 'program_name' %}
+{{ key }}={{ value }}
+{% endif %}
+{% endfor %}
+
