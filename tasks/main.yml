@@ -4,4 +4,4 @@
 #################################################################
 - name: Setup supervisor config
   template: src=supervisor.conf.j2 dest={{ supervisord_config_location }}/{{ item.value['program_name'] }}.conf
-  with_dict: supervisord_programs
+  with_dict: "{{ supervisord_programs }}"
